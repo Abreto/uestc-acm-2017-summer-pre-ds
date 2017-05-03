@@ -15,11 +15,17 @@
 
 \maketitle
 
-\section{问题一}
+\section{An easy problem A}
 
-中文文档类测试。你需要将所有源文件保存为 UTF-8 编码。
-你可以使用 XeLaTeX、LuaLaTeX 或 upLaTeX 编译,也可以使用 (pdf)LaTeX 编译。
-推荐使用 XeLaTeX 或 LuaLaTeX 编译。
+区间 $[L,R]$ 内的数的极差就是此区间内数的最大值减去最小值，即
+
+\[
+Q_{[L,R]} = \max_{L\le i \le R}{a_i} - \min_{L\le i \le R}{a_i}
+\]
+
+用 \verb|Sparse-table| 或线段树维护区间最大最小值即可.
+
+时间复杂度为 $O(N\log{N}+Q)$ 或 $O(N+Q\log{N})$.
 
 \section{问题二}
 
