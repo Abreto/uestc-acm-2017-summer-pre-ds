@@ -27,11 +27,16 @@ Q_{[L,R]} = \max_{L\le i \le R}{a_i} - \min_{L\le i \le R}{a_i}
 
 时间复杂度为 $O(N\log{N}+Q)$ 或 $O(N+Q\log{N})$.
 
-\section{问题二}
+\section{An easy problem B}
 
-\begin{equation}
-  \ln((n-1)!) < \int_1^n \ln t\,\mathrm{d}t < \ln(n!)
-\end{equation}
+建一颗线段树，维护每个区间的分别对于0和1的最大连续长度($maxl$)、从左起最长连续长度($lcon$)和从右起最大连续长度($rcon$).
+
+注意一下合并区间信息的过程，如果左子树的 $lcon$ 等于区间长度，那么父节点的 $lcon$ 等于左子树区间长度加上右子树的 $lcon$，
+其他类似。
+
+执行异或操作时，把0和1对应的信息对调即可。
+
+复杂度 $O(N+M\log(N)$.
 
 \subsection{概论}
 
