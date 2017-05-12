@@ -1,0 +1,19 @@
+\documentclass{ctexart}
+\pagestyle{plain}
+\begin{document}
+\section*{I - BanG Dreamer}
+
+贪心. 维护一个集合 $S$，存储候选父节点.
+
+从左到右遍历原序列.
+对于 $a_i$，若 $|S| = 0$，则把 $a_i$ 作为候选根节点加入 $S$ （一棵新的树）.
+否则在 $S$ 中查找值比 $a_i$ 小的最大元素 $f$，
+若 $f$ 不存在则同样把 $a_i$ 作为候选根节点加入 $S$，
+否则把 $a_i$ 作为 $f$ 的一个儿子. 
+检查 $f$ 的儿子数量，为 2 时在 $S$ 中删除 $f$.
+
+遍历完所有元素后，输出树的棵数和每棵树即可.
+
+时间复杂度 $O(n\log{n})$.
+
+\end{document}

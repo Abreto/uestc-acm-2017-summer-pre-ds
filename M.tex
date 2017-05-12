@@ -1,0 +1,16 @@
+\documentclass{ctexart}
+\pagestyle{plain}
+\begin{document}
+\section*{M - 老司机的毒奶}
+
+也是贪心. 每次选取集合 $A$ 中最大的数 $a_i$，找到一个最小的 $k$ 使得
+\[
+    \frac{a_i}{2^k} \notin A
+\]
+然后从 $A$ 中删除 $a_i$，加入 $\frac{a_i}{2^k}$.
+直到不存在这样的 $k$ 为止.
+此时集合 $A$ 中的最大值就是所有选手中初始最强者能力的最低值.
+
+时间复杂度 $O(n\log^2{n})$.
+
+\end{document}

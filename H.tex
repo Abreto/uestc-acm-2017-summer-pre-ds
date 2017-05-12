@@ -1,0 +1,19 @@
+\documentclass{ctexart}
+\pagestyle{plain}
+\begin{document}
+\section*{H - Rikka的烦恼}
+
+分块暴力线段树.
+
+取一个阀值 $K$，对每一个小于 $K$ 的公差 $d$ 建 $d$ 棵线段树，
+起始位置分别从 $1$ 取到 $d$，一共 $O(K^2)$ 棵线段树.
+
+对于每次修改，将 $a_p$ 加上 $v$ 后，对每个公差 $d$ 计算其起始位置，更新这些线段树.
+
+对于每次查询，如果 $d > K$，则暴力查找；
+若 $d \le K$，则根据 $x_0$ 计算出起始位置，在这棵线段树中查找.
+
+时间复杂度 $O(nK+m(K\log{n}+\frac{n}{K}+\log{n}))$.
+实践中当 $K=5$ 时表现最好.
+
+\end{document}

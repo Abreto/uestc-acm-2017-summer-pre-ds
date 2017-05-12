@@ -1,0 +1,20 @@
+\documentclass{ctexart}
+\pagestyle{plain}
+\begin{document}
+\section*{C - An easy problem C}
+
+线段树，每个区间维护区间和模 $P$ 的值. 
+
+每个区间的 $lazy$ 标记记录乘数和加数，规定先乘后加，于是每个标记初始为 $\{1,0\}$.
+打标记的时候注意一下
+
+\[
+newMul = (oldMul \cdot mul)\,\mathrm{mod}\,P
+\]
+\[
+  newAdd = (oldAdd \cdot mul + add)\,\mathrm{mod}\,P
+\]
+
+时间复杂度 $O(N+M\log{N})$.
+
+\end{document}

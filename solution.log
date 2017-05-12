@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.3.19)  29 APR 2017 19:25
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.3.19)  3 MAY 2017 22:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1285,19 +1285,54 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9.03374> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 26.
+(Font)              <8> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 26.
-[1
+(Font)              <6> on input line 20.
+\g__fontspec_family_FangSong_int=\count138
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font FangSong/I (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font FangSong/BI (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font FangSong/I (it probably doesn't exist).
+.................................................
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 26.
 
-] [2] (./solution.aux) ) 
+(/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
+File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FangSong(0)' created for font 'FangSong' with options
+. [Script={CJK},AutoFakeBold={4}].
+. 
+. This font family consists of the following NFSS series/shapes:
+. - 'normal' (m/n) with NFSS spec.:
+. <->"FangSong/OT:script=hani;language=DFLT;"
+. - 'small caps'  (m/sc) with NFSS spec.: - 'bold' (bx/n) with NFSS spec.:
+. <->"FangSong/OT:script=hani;language=DFLT;embolden=4;"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+.................................................
+ [1
+
+] [2]
+(./solution.aux) ) 
 Here is how much of TeX's memory you used:
- 20303 strings out of 493638
- 419684 string characters out of 6146796
- 421480 words of memory out of 5000000
- 23552 multiletter control sequences out of 15000+600000
+ 20351 strings out of 493638
+ 420724 string characters out of 6146796
+ 422513 words of memory out of 5000000
+ 23592 multiletter control sequences out of 15000+600000
  8781 words of font info for 53 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 65i,6n,77p,10473b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,6n,77p,10473b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on solution.pdf (2 pages).

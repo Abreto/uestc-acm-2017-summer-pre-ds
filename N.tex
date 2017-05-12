@@ -1,0 +1,17 @@
+\documentclass{ctexart}
+\pagestyle{plain}
+\begin{document}
+\section*{N - 可以说是非常豹笑了}
+
+并查集的题. 用 $\neg{}x$ 表示与第 $x$ 天相反的状态，
+每个集合表示集合里所有的元素是同一个状态（笑或者没笑）.
+这样只要同一个集合中出现了 $x$ 与 $\neg{}x$，那么给出的关系就是不成立的.
+
+遍历每一条关系.
+如果第 $A$ 天和第 $B$ 天表情一样，就把 $A$ 和 $B$ 相并， $\neg{}A$ 和 $\neg{}B$ 相并.
+否则把 $A$ 和 $\neg{}B$ 相并，$\neg{}A$ 和 $B$ 相并.
+然后判断 $A$ 和 $\neg{}A$ 或 $B$ 和 $\neg{}B$ 是否出现在同一个集合.
+
+时间复杂度 $O(M\alpha(M,N))$.
+
+\end{document}

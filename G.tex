@@ -1,0 +1,22 @@
+\documentclass{ctexart}
+\pagestyle{plain}
+\begin{document}
+\section*{G - 加帕里公园的friends}
+
+单点修改线段树. 每个区间维护当前区间的和、最大子区间和、分别从左和从右的最大连续区间和.
+
+合并的时候注意
+\[
+    o.maxsum = \max{\{l.maxsum, r.maxsum, l.rsum+r.lsum\}}
+\]
+\[
+    o.lsum = \max{\{l.lsum, l.sum+r.lsum\}}
+\]
+\[
+    o.rsum = \max{\{r.rsum, r.sum+l.rsum\}}
+\]
+即可.
+
+时间复杂度 $O(n+m\log{n})$.
+
+\end{document}

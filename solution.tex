@@ -1,4 +1,4 @@
-\documentclass[fontset=windowsnew,zihao=-4,scheme=chinese,punct=quanjiao,linespread=1,UTF8]{ctexart}
+\documentclass[fontset=windowsnew,zihao=-4,scheme=chinese,punct=quanjiao,linespread=1.35,UTF8]{ctexart}
 \usepackage[a4paper,centering,top=3cm,left=2.6cm]{geometry}
 \pagestyle{plain}
 \ctexset{section={
@@ -20,7 +20,7 @@
 区间 $[L,R]$ 内的数的极差就是此区间内数的最大值减去最小值，即
 
 \[
-Q_{[L,R]} = \max_{L\le i \le R}{a_i} - \min_{L\le i \le R}{a_i}
+Q_{[L,R]} = \max_{L\le i \le R}{\{a_i\}} - \min_{L\le i \le R}{\{a_i\}}
 \]
 
 用 \verb|Sparse-table| 或线段树维护区间最大最小值即可.
@@ -32,19 +32,27 @@ Q_{[L,R]} = \max_{L\le i \le R}{a_i} - \min_{L\le i \le R}{a_i}
 建一颗线段树，维护每个区间的分别对于0和1的最大连续长度($maxl$)、从左起最长连续长度($lcon$)和从右起最大连续长度($rcon$).
 
 注意一下合并区间信息的过程，如果左子树的 $lcon$ 等于区间长度，那么父节点的 $lcon$ 等于左子树区间长度加上右子树的 $lcon$，
-其他类似。
+其他类似.
 
-执行异或操作时，把0和1对应的信息对调即可。
+执行异或操作时，把0和1对应的信息对调即可.
 
-复杂度 $O(N+M\log(N)$.
+复杂度 $O(N+M\log{N})$.
 
-\subsection{概论}
+\section{An easy problem C}
 
+线段树，每个区间维护区间和模 $P$ 的值. 
 
-\today \figurename
+每个区间的 $lazy$ 标记记录乘数和加数，规定先乘后除，于是每个标记初始为 $\{1,0\}$.
+打标记的时候注意一下
 
-\section{问题三}
+\[
+newMul = oldMul \cdot mul
+\]
+\[
+  newAdd = oldAdd \cdot mul + add
+\]
 
+时间复杂度 $O(N+M\log{N})$.
 
 \section{问题四}
 
